@@ -1,6 +1,5 @@
 const date=new Date().toISOString().split("T")[0];
 const BASE_URL=`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${date}/v1/currencies`;
-// const BASE_URL="https://currency-conversion-and-exchange-rates.p.rapidapi.com/timeseries?start_date=2019-01-01&end_date=2019-01-02&base=USD&symbols=EUR%2CGBP";
 const dropdowns=document.querySelectorAll(".dropdown select");
 const button=document.querySelector("form button");
 
@@ -46,7 +45,6 @@ button.addEventListener("click",async(event)=>{
         amount.value="1";
     }
 
-    // const URL=`${BASE_URL}/${from.value.toLowerCase()}/${to.value.toLowerCase()}.json`;
     const URL=`${BASE_URL}/${from.value.toLowerCase()}.json`;
     console.log(URL);
     let response=await fetch(URL);
